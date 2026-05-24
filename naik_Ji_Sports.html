@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naik Ji Sports</title>
+  <link rel="stylesheet" href="nike.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Naik Ji Sports</div>
+  <nav>
+    <a href="#" onclick="openWiki('Men\'s clothing')">Purush</a>
+    <a href="#" onclick="openWiki('Women\'s clothing')">Stree</a>
+    <a href="#" onclick="openWiki('Children\'s clothing')">balak</a>
+  </nav>
+  <div class="cart">🛒 <span id="cart-count">0</span></div>
+</header>
+
+<section class="hero">
+  <h1>बस कर डालो</h1>
+  <button>Shop Now</button>
+</section>
+
+<section class="products">
+  <h2>Featured</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="mike.jpeg">
+      <h3>Air Mantri</h3>
+      <p>₹99999</p>
+      <button onclick="addToCart('Air Mantri',99999)">Add to Cart</button>
+      <button onclick="openWiki('Toilet paper orientation')">View Info</button>
+    </div>
+
+    <div class="card">
+      <img src="hawa_3.0.jpg">
+      <h3>Air Janardhan 1</h3>
+      <p>₹69696969 </p>
+      <button onclick="addToCart('Air Janardhan 1',69696969)">Add to Cart</button>
+      <button onclick="openWiki('Tung Tung Tung Sahur')">View Info</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openWiki(topic) {
+    const wikiUrl = 'https://en.wikipedia.org/wiki/' + encodeURIComponent(topic.replace(/\s+/g, '_'));
+    window.open(wikiUrl, '_blank');
+  }
+</script>
+</body>
+</html>
